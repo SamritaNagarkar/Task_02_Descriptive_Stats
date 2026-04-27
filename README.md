@@ -27,21 +27,6 @@ Dataset used:
 link - Google Drive: 2024 Facebook Political Ads
 Download and place the CSV file inside the `data/` folder.
 
-Project Structure-
-Task_02_Descriptive_Stats/
-│── data/
-│── scripts/
-│   ├── pure_python_stats.py
-│   ├── pandas_stats.py
-│   └── polars_stats.py
-│── results/
-│   ├── pure_python_summary.txt
-│   ├── pandas_summary.txt
-│   └── polars_summary.txt
-│── REFLECTION.md
-│── README.md
-│── requirements.txt
-
 ## How to Run
 Clone repository:
 git clone https://github.com/SamritaNagarkar/Task_02_Descriptive_Stats.git
