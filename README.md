@@ -24,7 +24,8 @@ This milestone builds on Task 1 by introducing:
 Dataset used:
 
 **2024 Facebook Political Ads Dataset**
-link - Google Drive: 2024 Facebook Political Ads
+link - [Google Drive: 2024 Facebook Political Ads](https://drive.google.com/file/d/1UPo11lH2Mlk2cnLtjv8P9XqlKitms-gp/view)
+
 Download and place the CSV file inside the `data/` folder.
 
 ## How to Run
