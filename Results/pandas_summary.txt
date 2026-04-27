@@ -1,0 +1,702 @@
+Pandas descriptive statistics
+Dataset file: 2024_fb_ads_president_scored_anon.csv
+
+Dataset Overview:
+=================
+Shape: (246745, 41)
+
+Data Types:
+page_id                                      object
+ad_id                                        object
+ad_creation_time                             object
+bylines                                      object
+currency                                     object
+delivery_by_region                           object
+demographic_distribution                     object
+estimated_audience_size                       int64
+estimated_impressions                         int64
+estimated_spend                               int64
+publisher_platforms                          object
+illuminating_scored_message                  object
+illuminating_mentions                        object
+scam_illuminating                             int64
+election_integrity_Truth_illuminating         int64
+advocacy_msg_type_illuminating                int64
+issue_msg_type_illuminating                   int64
+attack_msg_type_illuminating                  int64
+image_msg_type_illuminating                   int64
+cta_msg_type_illuminating                     int64
+engagement_cta_subtype_illuminating           int64
+fundraising_cta_subtype_illuminating          int64
+voting_cta_subtype_illuminating               int64
+covid_topic_illuminating                      int64
+economy_topic_illuminating                    int64
+education_topic_illuminating                  int64
+environment_topic_illuminating                int64
+foreign_policy_topic_illuminating             int64
+governance_topic_illuminating                 int64
+health_topic_illuminating                     int64
+immigration_topic_illuminating                int64
+lgbtq_issues_topic_illuminating               int64
+military_topic_illuminating                   int64
+race_and_ethnicity_topic_illuminating         int64
+safety_topic_illuminating                     int64
+social_and_cultural_topic_illuminating        int64
+technology_and_privacy_topic_illuminating     int64
+womens_issue_topic_illuminating               int64
+incivility_illuminating                       int64
+freefair_illuminating                         int64
+fraud_illuminating                            int64
+dtype: object
+
+Info:
+<class 'pandas.core.frame.DataFrame'>
+RangeIndex: 246745 entries, 0 to 246744
+Data columns (total 41 columns):
+ #   Column                                     Non-Null Count   Dtype 
+---  ------                                     --------------   ----- 
+ 0   page_id                                    246745 non-null  object
+ 1   ad_id                                      246745 non-null  object
+ 2   ad_creation_time                           246745 non-null  object
+ 3   bylines                                    245736 non-null  object
+ 4   currency                                   246745 non-null  object
+ 5   delivery_by_region                         246745 non-null  object
+ 6   demographic_distribution                   246745 non-null  object
+ 7   estimated_audience_size                    246745 non-null  int64 
+ 8   estimated_impressions                      246745 non-null  int64 
+ 9   estimated_spend                            246745 non-null  int64 
+ 10  publisher_platforms                        246745 non-null  object
+ 11  illuminating_scored_message                246745 non-null  object
+ 12  illuminating_mentions                      246745 non-null  object
+ 13  scam_illuminating                          246745 non-null  int64 
+ 14  election_integrity_Truth_illuminating      246745 non-null  int64 
+ 15  advocacy_msg_type_illuminating             246745 non-null  int64 
+ 16  issue_msg_type_illuminating                246745 non-null  int64 
+ 17  attack_msg_type_illuminating               246745 non-null  int64 
+ 18  image_msg_type_illuminating                246745 non-null  int64 
+ 19  cta_msg_type_illuminating                  246745 non-null  int64 
+ 20  engagement_cta_subtype_illuminating        246745 non-null  int64 
+ 21  fundraising_cta_subtype_illuminating       246745 non-null  int64 
+ 22  voting_cta_subtype_illuminating            246745 non-null  int64 
+ 23  covid_topic_illuminating                   246745 non-null  int64 
+ 24  economy_topic_illuminating                 246745 non-null  int64 
+ 25  education_topic_illuminating               246745 non-null  int64 
+ 26  environment_topic_illuminating             246745 non-null  int64 
+ 27  foreign_policy_topic_illuminating          246745 non-null  int64 
+ 28  governance_topic_illuminating              246745 non-null  int64 
+ 29  health_topic_illuminating                  246745 non-null  int64 
+ 30  immigration_topic_illuminating             246745 non-null  int64 
+ 31  lgbtq_issues_topic_illuminating            246745 non-null  int64 
+ 32  military_topic_illuminating                246745 non-null  int64 
+ 33  race_and_ethnicity_topic_illuminating      246745 non-null  int64 
+ 34  safety_topic_illuminating                  246745 non-null  int64 
+ 35  social_and_cultural_topic_illuminating     246745 non-null  int64 
+ 36  technology_and_privacy_topic_illuminating  246745 non-null  int64 
+ 37  womens_issue_topic_illuminating            246745 non-null  int64 
+ 38  incivility_illuminating                    246745 non-null  int64 
+ 39  freefair_illuminating                      246745 non-null  int64 
+ 40  fraud_illuminating                         246745 non-null  int64 
+dtypes: int64(31), object(10)
+memory usage: 77.2+ MB
+
+
+Missing Values
+==============
+page_id: 0 (0.00%)
+ad_id: 0 (0.00%)
+ad_creation_time: 0 (0.00%)
+bylines: 1009 (0.41%)
+currency: 0 (0.00%)
+delivery_by_region: 0 (0.00%)
+demographic_distribution: 0 (0.00%)
+estimated_audience_size: 0 (0.00%)
+estimated_impressions: 0 (0.00%)
+estimated_spend: 0 (0.00%)
+publisher_platforms: 0 (0.00%)
+illuminating_scored_message: 0 (0.00%)
+illuminating_mentions: 0 (0.00%)
+scam_illuminating: 0 (0.00%)
+election_integrity_Truth_illuminating: 0 (0.00%)
+advocacy_msg_type_illuminating: 0 (0.00%)
+issue_msg_type_illuminating: 0 (0.00%)
+attack_msg_type_illuminating: 0 (0.00%)
+image_msg_type_illuminating: 0 (0.00%)
+cta_msg_type_illuminating: 0 (0.00%)
+engagement_cta_subtype_illuminating: 0 (0.00%)
+fundraising_cta_subtype_illuminating: 0 (0.00%)
+voting_cta_subtype_illuminating: 0 (0.00%)
+covid_topic_illuminating: 0 (0.00%)
+economy_topic_illuminating: 0 (0.00%)
+education_topic_illuminating: 0 (0.00%)
+environment_topic_illuminating: 0 (0.00%)
+foreign_policy_topic_illuminating: 0 (0.00%)
+governance_topic_illuminating: 0 (0.00%)
+health_topic_illuminating: 0 (0.00%)
+immigration_topic_illuminating: 0 (0.00%)
+lgbtq_issues_topic_illuminating: 0 (0.00%)
+military_topic_illuminating: 0 (0.00%)
+race_and_ethnicity_topic_illuminating: 0 (0.00%)
+safety_topic_illuminating: 0 (0.00%)
+social_and_cultural_topic_illuminating: 0 (0.00%)
+technology_and_privacy_topic_illuminating: 0 (0.00%)
+womens_issue_topic_illuminating: 0 (0.00%)
+incivility_illuminating: 0 (0.00%)
+freefair_illuminating: 0 (0.00%)
+fraud_illuminating: 0 (0.00%)
+
+Numwric summary statistics
+==========================
+       estimated_audience_size  estimated_impressions  estimated_spend  ...  incivility_illuminating  freefair_illuminating  fraud_illuminating
+count             2.467450e+05          246745.000000    246745.000000  ...            246745.000000          246745.000000       246745.000000
+mean              5.564629e+05           45601.525952      1061.291434  ...                 0.187526               0.006416            0.002638
+std               4.098648e+05          136790.769901      4992.560749  ...                 0.390334               0.079840            0.051297
+min               0.000000e+00             499.000000        49.000000  ...                 0.000000               0.000000            0.000000
+25%               7.500000e+04             499.000000        49.000000  ...                 0.000000               0.000000            0.000000
+50%               3.000000e+05            3499.000000        49.000000  ...                 0.000000               0.000000            0.000000
+75%               1.000001e+06           22499.000000       449.000000  ...                 0.000000               0.000000            0.000000
+max               1.000001e+06         1000000.000000    474999.000000  ...                 1.000000               1.000000            1.000000
+
+[8 rows x 31 columns]
+
+Categorical summary statistics
+==============================
+                                                  page_id  ... illuminating_mentions
+count                                              246745  ...                246745
+unique                                               4475  ...                   278
+top     4d66f5853f0365dba032a87704a634f023d15babde973b...  ...                    []
+freq                                                55503  ...                 73205
+
+[4 rows x 10 columns]
+
+Column Level Analysis
+=====================
+
+Column: page_id
+---------------
+Type: Categorical
+Count: 246745
+Unique values: 4475
+Mode: 4d66f5853f0365dba032a87704a634f023d15babde973bb7a284ed8cd2707b2d (55503)
+Top 5 values:
+page_id
+4d66f5853f0365dba032a87704a634f023d15babde973bb7a284ed8cd2707b2d    55503
+e3342051b60393770363ffc02946a0f76bc3e4155190d1f05fb0277b34bf6480    23988
+4ade404186269ec62d2dd7d9e0ed5f93a5f32c057516879d627ea9fbd628ef9b    14822
+330b2f35ded2161e63fbb2b5c5bdae05bff274ff31f990c275d28ce408671ce0    10461
+ec8ac6dc1cddc49972de2c31b62343fe3979729ec437c3b8d6ffa8915ab1401d     9851
+Name: count, dtype: int64
+
+Column: ad_id
+-------------
+Type: Categorical
+Count: 246745
+Unique values: 246745
+Mode: 0ddb025b8544e2d58e6977ad417e742a52522b3e1fc1c9d9b61c57148f8d72fc (1)
+Top 5 values:
+ad_id
+0ddb025b8544e2d58e6977ad417e742a52522b3e1fc1c9d9b61c57148f8d72fc    1
+329368f2aa4e55f382777eeb9076b6dc15d27129adc7546a6c2366c1294820d9    1
+2c055606917671911ca27cd4a152aea8294c227696bbfc8c7110c979369e7987    1
+827620adb660bd50f856a2953ea6e8346aa9e85183d24b39e5feb66a9827c3cc    1
+2e724cb4530a0da3f5fc6247251056dfe0001390e456d8bfed4af66d9878a009    1
+Name: count, dtype: int64
+
+Column: ad_creation_time
+------------------------
+Type: Categorical
+Count: 246745
+Unique values: 547
+Mode: 2024-10-27 (8619)
+Top 5 values:
+ad_creation_time
+2024-10-27    8619
+2024-10-28    7356
+2024-10-26    6414
+2024-10-23    5021
+2024-10-25    4769
+Name: count, dtype: int64
+
+Column: bylines
+---------------
+Type: Categorical
+Count: 245736
+Unique values: 3790
+Mode: HARRIS FOR PRESIDENT (49788)
+Top 5 values:
+bylines
+HARRIS FOR PRESIDENT                        49788
+HARRIS VICTORY FUND                         32612
+BIDEN VICTORY FUND                          15539
+DONALD J. TRUMP FOR PRESIDENT 2024, INC.    15112
+Trump National Committee JFC                 7279
+Name: count, dtype: int64
+
+Column: currency
+----------------
+Type: Categorical
+Count: 246745
+Unique values: 18
+Mode: USD (246599)
+Top 5 values:
+currency
+USD    246599
+INR        63
+GBP        17
+EUR        11
+PKR         8
+Name: count, dtype: int64
+
+Column: delivery_by_region
+--------------------------
+Type: Categorical
+Count: 246745
+Unique values: 141122
+Mode: {} (30989)
+Top 5 values:
+delivery_by_region
+{}                                                     30989
+{'Georgia': {'spend': 49, 'impressions': 499}}          2307
+{'Arizona': {'spend': 49, 'impressions': 499}}          2020
+{'Pennsylvania': {'spend': 49, 'impressions': 499}}     1912
+{'Nevada': {'spend': 49, 'impressions': 499}}           1870
+Name: count, dtype: int64
+
+Column: demographic_distribution
+--------------------------------
+Type: Categorical
+Count: 246745
+Unique values: 215622
+Mode: {} (30989)
+Top 5 values:
+demographic_distribution
+{}                                                    30989
+{'female_65+': {'spend': 49, 'impressions': 499}}        44
+{'male_65+': {'spend': 49, 'impressions': 499}}          24
+{'female_65+': {'spend': 49, 'impressions': 1499}}       13
+{'female_65+': {'spend': 49, 'impressions': 2499}}       12
+Name: count, dtype: int64
+
+Column: estimated_audience_size
+-------------------------------
+Type: Numeric
+Count: 246745
+Mean: 556462.8559687126
+Min: 0
+Max: 1000001
+Median: 300000.0
+Std Dev: 409863.92827886896
+
+Column: estimated_impressions
+-----------------------------
+Type: Numeric
+Count: 246745
+Mean: 45601.52595189366
+Min: 499
+Max: 1000000
+Median: 3499.0
+Std Dev: 136790.49271013253
+
+Column: estimated_spend
+-----------------------
+Type: Numeric
+Count: 246745
+Mean: 1061.2914344768892
+Min: 49
+Max: 474999
+Median: 49.0
+Std Dev: 4992.550631937455
+
+Column: publisher_platforms
+---------------------------
+Type: Categorical
+Count: 246745
+Unique values: 9
+Mode: ['facebook', 'instagram'] (214434)
+Top 5 values:
+publisher_platforms
+['facebook', 'instagram']                                     214434
+['facebook']                                                   23259
+['instagram']                                                   8395
+['facebook', 'instagram', 'audience_network', 'messenger']       459
+['facebook', 'instagram', 'audience_network']                     79
+Name: count, dtype: int64
+
+Column: illuminating_scored_message
+-----------------------------------
+Type: Categorical
+Count: 246745
+Unique values: 26338
+Mode: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855 (5972)
+Top 5 values:
+illuminating_scored_message
+e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855    5972
+82459467ad44f717f2089911f5210cce1ff025dc0cee03bdb2e60da827edb282    1887
+3b1d236346df93fd259a23d523f6deeed9b9939158b6f34b11854ea0f97ef35d    1352
+7e119dac6ca701d8070d0ca8c5b480f016523cb1b78748ee27d69e71c5017f8d    1341
+8e1144f0b13549c2652e19f6dd1ae523956a19671c5e4383a31f09d9325f1239    1172
+Name: count, dtype: int64
+
+Column: illuminating_mentions
+-----------------------------
+Type: Categorical
+Count: 246745
+Unique values: 278
+Mode: [] (73205)
+Top 5 values:
+illuminating_mentions
+[]                     73205
+['Donald Trump']       53182
+['Kamala Harris']      31019
+['President Trump']    14580
+['Joe Biden']          14059
+Name: count, dtype: int64
+
+Column: scam_illuminating
+-------------------------
+Type: Numeric
+Count: 246745
+Mean: 0.07163265719670105
+Min: 0
+Max: 1
+Median: 0.0
+Std Dev: 0.25787869167401956
+
+Column: election_integrity_Truth_illuminating
+---------------------------------------------
+Type: Numeric
+Count: 246745
+Mean: 0.05008814768283045
+Min: 0
+Max: 1
+Median: 0.0
+Std Dev: 0.21812685562386466
+
+Column: advocacy_msg_type_illuminating
+--------------------------------------
+Type: Numeric
+Count: 246745
+Mean: 0.5486311779367363
+Min: 0
+Max: 1
+Median: 1.0
+Std Dev: 0.49762938873554086
+
+Column: issue_msg_type_illuminating
+-----------------------------------
+Type: Numeric
+Count: 246745
+Mean: 0.38164907090315914
+Min: 0
+Max: 1
+Median: 0.0
+Std Dev: 0.48579116663745425
+
+Column: attack_msg_type_illuminating
+------------------------------------
+Type: Numeric
+Count: 246745
+Mean: 0.27185555938316885
+Min: 0
+Max: 1
+Median: 0.0
+Std Dev: 0.44491585071297657
+
+Column: image_msg_type_illuminating
+-----------------------------------
+Type: Numeric
+Count: 246745
+Mean: 0.22270360088350322
+Min: 0
+Max: 1
+Median: 0.0
+Std Dev: 0.41606094149425504
+
+Column: cta_msg_type_illuminating
+---------------------------------
+Type: Numeric
+Count: 246745
+Mean: 0.5727694583476869
+Min: 0
+Max: 1
+Median: 1.0
+Std Dev: 0.49467626376455676
+
+Column: engagement_cta_subtype_illuminating
+-------------------------------------------
+Type: Numeric
+Count: 246745
+Mean: 0.12486980485926767
+Min: 0
+Max: 1
+Median: 0.0
+Std Dev: 0.33057122786673815
+
+Column: fundraising_cta_subtype_illuminating
+--------------------------------------------
+Type: Numeric
+Count: 246745
+Mean: 0.22848689943058623
+Min: 0
+Max: 1
+Median: 0.0
+Std Dev: 0.4198578762138146
+
+Column: voting_cta_subtype_illuminating
+---------------------------------------
+Type: Numeric
+Count: 246745
+Mean: 0.1438448600782184
+Min: 0
+Max: 1
+Median: 0.0
+Std Dev: 0.3509323528945909
+
+Column: covid_topic_illuminating
+--------------------------------
+Type: Numeric
+Count: 246745
+Mean: 0.024875884009807697
+Min: 0
+Max: 1
+Median: 0.0
+Std Dev: 0.15574682791132594
+
+Column: economy_topic_illuminating
+----------------------------------
+Type: Numeric
+Count: 246745
+Mean: 0.12212202881517356
+Min: 0
+Max: 1
+Median: 0.0
+Std Dev: 0.32742669239523003
+
+Column: education_topic_illuminating
+------------------------------------
+Type: Numeric
+Count: 246745
+Mean: 0.01432653143934021
+Min: 0
+Max: 1
+Median: 0.0
+Std Dev: 0.1188330001984883
+
+Column: environment_topic_illuminating
+--------------------------------------
+Type: Numeric
+Count: 246745
+Mean: 0.02124865752092241
+Min: 0
+Max: 1
+Median: 0.0
+Std Dev: 0.14421217727521354
+
+Column: foreign_policy_topic_illuminating
+-----------------------------------------
+Type: Numeric
+Count: 246745
+Mean: 0.005264544367667025
+Min: 0
+Max: 1
+Median: 0.0
+Std Dev: 0.07236593770745813
+
+Column: governance_topic_illuminating
+-------------------------------------
+Type: Numeric
+Count: 246745
+Mean: 0.025641856977851627
+Min: 0
+Max: 1
+Median: 0.0
+Std Dev: 0.15806439241179096
+
+Column: health_topic_illuminating
+---------------------------------
+Type: Numeric
+Count: 246745
+Mean: 0.10918964923301384
+Min: 0
+Max: 1
+Median: 0.0
+Std Dev: 0.3118770105887304
+
+Column: immigration_topic_illuminating
+--------------------------------------
+Type: Numeric
+Count: 246745
+Mean: 0.03356906928205232
+Min: 0
+Max: 1
+Median: 0.0
+Std Dev: 0.18011714762810338
+
+Column: lgbtq_issues_topic_illuminating
+---------------------------------------
+Type: Numeric
+Count: 246745
+Mean: 0.0032300553202699142
+Min: 0
+Max: 1
+Median: 0.0
+Std Dev: 0.05674171360548478
+
+Column: military_topic_illuminating
+-----------------------------------
+Type: Numeric
+Count: 246745
+Mean: 0.002176335893331172
+Min: 0
+Max: 1
+Median: 0.0
+Std Dev: 0.046600423339389845
+
+Column: race_and_ethnicity_topic_illuminating
+---------------------------------------------
+Type: Numeric
+Count: 246745
+Mean: 0.01243388923787716
+Min: 0
+Max: 1
+Median: 0.0
+Std Dev: 0.11081194717288713
+
+Column: safety_topic_illuminating
+---------------------------------
+Type: Numeric
+Count: 246745
+Mean: 0.03372307442906645
+Min: 0
+Max: 1
+Median: 0.0
+Std Dev: 0.18051545274632563
+
+Column: social_and_cultural_topic_illuminating
+----------------------------------------------
+Type: Numeric
+Count: 246745
+Mean: 0.10583801090194331
+Min: 0
+Max: 1
+Median: 0.0
+Std Dev: 0.30763017789314195
+
+Column: technology_and_privacy_topic_illuminating
+-------------------------------------------------
+Type: Numeric
+Count: 246745
+Mean: 0.0011550386026059293
+Min: 0
+Max: 1
+Median: 0.0
+Std Dev: 0.03396622570185294
+
+Column: womens_issue_topic_illuminating
+---------------------------------------
+Type: Numeric
+Count: 246745
+Mean: 0.08090944092078867
+Min: 0
+Max: 1
+Median: 0.0
+Std Dev: 0.2726959906028699
+
+Column: incivility_illuminating
+-------------------------------
+Type: Numeric
+Count: 246745
+Mean: 0.18752558309185596
+Min: 0
+Max: 1
+Median: 0.0
+Std Dev: 0.3903328563900049
+
+Column: freefair_illuminating
+-----------------------------
+Type: Numeric
+Count: 246745
+Mean: 0.006415530203246266
+Min: 0
+Max: 1
+Median: 0.0
+Std Dev: 0.07983965916440881
+
+Column: fraud_illuminating
+--------------------------
+Type: Numeric
+Count: 246745
+Mean: 0.0026383513343735433
+Min: 0
+Max: 1
+Median: 0.0
+Std Dev: 0.05129708019557693
+
+Grouped Analysis by page_id
+===========================
+Number of page_id groups: 4475
+
+Top 10 page_id groups by row count
+page_id
+4d66f5853f0365dba032a87704a634f023d15babde973bb7a284ed8cd2707b2d    55503
+e3342051b60393770363ffc02946a0f76bc3e4155190d1f05fb0277b34bf6480    23988
+4ade404186269ec62d2dd7d9e0ed5f93a5f32c057516879d627ea9fbd628ef9b    14822
+330b2f35ded2161e63fbb2b5c5bdae05bff274ff31f990c275d28ce408671ce0    10461
+ec8ac6dc1cddc49972de2c31b62343fe3979729ec437c3b8d6ffa8915ab1401d     9851
+e3ee066f4a12968ba94847059a03c33965ca4eb1ead0f6f01d6f6ae65adb4841     6581
+c5728dbf6f860c0fe9722cb42f5273ec659d701ebf68f3e1d7b63da7958297ee     3625
+19ab0dfc0ac8cd43df84a6ccffad5c3b1972fcfd4453bff95f51301aa5c36940     3186
+53a74049e9ff3c4276f15cb0dc6d35c93e830c25a5eee6f3d914321922913415     2814
+8b7ed6251d2f780296c0933fbe3f34ad51046d2d15ecacbc23b05ff65aaf0aff     2766
+dtype: int64
+
+Numeric grouped summary by page_id (first 10 groups)
+                                                   estimated_audience_size                                             ... fraud_illuminating                    
+                                                                     count          mean      min      max     median  ...               mean min max median  std
+page_id                                                                                                                ...                                       
+0005687f4ac876c135dda2bd5aa60962eced3356228ef01...                       2  5.250000e+03     3000     7500     5250.0  ...                0.0   0   0    0.0  0.0
+00157b7e28846e0510e1d265c5ea72fea289d9a3e31a91b...                       3  1.268333e+04      550    30000     7500.0  ...                0.0   0   0    0.0  0.0
+002415d34a27e69e6b9c0a2d1b0b8b99aacddf88c766ce1...                       1  3.000000e+05   300000   300000   300000.0  ...                0.0   0   0    0.0  NaN
+002a7fde0f1b2e9116e80f42d7dfea04ccdd61308dc5cc8...                       4  1.000001e+06  1000001  1000001  1000001.0  ...                0.0   0   0    0.0  0.0
+003acdd6c226d5c2fa272e55ad9a8d39a82e2b6c2ed504b...                       1  1.000001e+06  1000001  1000001  1000001.0  ...                0.0   0   0    0.0  NaN
+0052e597646ada728a3321aa7a4dc98b9e3f0e2d4215de3...                       1  7.500000e+04    75000    75000    75000.0  ...                0.0   0   0    0.0  NaN
+0054486b6689b350b5d20a4d78ac0fe5f8f82e083aa72d0...                     167  1.190171e+05      550  1000001    30000.0  ...                0.0   0   0    0.0  0.0
+0055a3ffa4db31eb7ab3042dc0603aa52c409aad815061a...                       8  1.000001e+06  1000001  1000001  1000001.0  ...                0.0   0   0    0.0  0.0
+005b231946e0436490095ce46adb4043462c376fb24cf90...                      28  3.964286e+04    30000   300000    30000.0  ...                0.0   0   0    0.0  0.0
+005b7dcff35441472bbdf923c423936bf35cebc4a78547f...                       1  5.500000e+02      550      550      550.0  ...                0.0   0   0    0.0  NaN
+
+[10 rows x 186 columns]
+
+Grouped Analysis by page_id + ad_id
+===================================
+Number of page_id + ad_id groups: 246745
+
+Top 10 page_id + ad_id groups by row count
+page_id                                                           ad_id                                                           
+0005687f4ac876c135dda2bd5aa60962eced3356228ef01c21c514d263a11128  10913e6cae50d9aafe81b85c23f4ad11e24bde5d4f24643c14734a19a2733e5e    1
+a5d4180d3b85b15658e85958d13ccee29d5411bf223be55c5471a3fa785be272  85f1c7b3c4b625d3c4185924ee367144ba37468a2864b36f3728acef3ada3da1    1
+                                                                  7bc8c3f6b35023a21f55583e4e0f5a7c9bc6fbf36c55b8d057833cc815d43b30    1
+                                                                  7bcecd20db9db16f5e5af4aedb00b7bebc8629834cdf52d76a866af6d5365298    1
+                                                                  7bff2fcd79fa0294c6d9655b68d5323f65e1e633946e5df6439cbe9c09400fbb    1
+                                                                  7c1b8af5bfbe6acc156edd42f8708829c5aada908ebfd82c7aabe6ee4f99c04f    1
+                                                                  7c2946c28d7905d4354909d9e9e3b16ad636ee63b9f3abb0fed458f84ef957c0    1
+                                                                  7c2b2c23e752e5403484fe36b95f0c8895dbe09f19a47b1dc82d4c2252e7e4b6    1
+                                                                  7c2b62f86b3278fec5d0b550ddff625524611bea78bc2743e9c31d7d2ef95d3e    1
+                                                                  7c36f8db7b2d912ff1d8c00f1bd29dd7f507ce2bbefae7ee5fde15589492e0a6    1
+dtype: int64
+
+Numeric grouped summary by page_id + ad_id (first 10 groups)
+                                                                                                      estimated_audience_size             ... fraud_illuminating    
+                                                                                                                        count       mean  ...             median std
+page_id                                            ad_id                                                                                  ...                       
+0005687f4ac876c135dda2bd5aa60962eced3356228ef01... 10913e6cae50d9aafe81b85c23f4ad11e24bde5d4f24643...                       1     7500.0  ...                0.0 NaN
+                                                   5ae5f50e059148a06b00ef785636346997d35ee843d2900...                       1     3000.0  ...                0.0 NaN
+00157b7e28846e0510e1d265c5ea72fea289d9a3e31a91b... 715ec14d254bf4e5b576e257e96f77967ef5c27604238eb...                       1    30000.0  ...                0.0 NaN
+                                                   779bcd2014d6a7b8c522dbf28360ecfed261573da19523a...                       1     7500.0  ...                0.0 NaN
+                                                   a4a6f2f0accaf13372d8e9790de38774e2e2dfc07172c64...                       1      550.0  ...                0.0 NaN
+002415d34a27e69e6b9c0a2d1b0b8b99aacddf88c766ce1... 6001578eecf31f7e5ca33146ecede00c7b10d26a824028f...                       1   300000.0  ...                0.0 NaN
+002a7fde0f1b2e9116e80f42d7dfea04ccdd61308dc5cc8... 3d764bf872d579b5c1c0de43fe21827c1a2ca52813054e8...                       1  1000001.0  ...                0.0 NaN
+                                                   4221e13fe9aefa1aa86e900a73e510121da93e165ebc955...                       1  1000001.0  ...                0.0 NaN
+                                                   4425da1303236fe461d2791e6934fc778d19840fce4ab83...                       1  1000001.0  ...                0.0 NaN
+                                                   cfad8965e38dfe53ce0d2587ad98b297b368994933e38af...                       1  1000001.0  ...                0.0 NaN
+
+[10 rows x 186 columns]
